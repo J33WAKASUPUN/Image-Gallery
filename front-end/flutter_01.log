@@ -1,0 +1,104 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter pub get --no-example
+
+## exception
+
+PathExistsException: PathExistsException: Cannot create link, path = 'H:\Flutter\image_gallery\image_gallery_frontend\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows' (OS Error: Cannot create a file when that file already exists.
+, errno = 183)
+
+```
+#0      _Link.throwIfError (dart:io/link.dart:357:7)
+#1      _Link.createSync (dart:io/link.dart:275:5)
+#2      ForwardingLink.createSync (package:file/src/forwarding/forwarding_link.dart:20:16)
+#3      ForwardingLink.createSync (package:file/src/forwarding/forwarding_link.dart:20:16)
+#4      _createPlatformPluginSymlinks (package:flutter_tools/src/flutter_plugins.dart:1111:12)
+#5      createPluginSymlinks (package:flutter_tools/src/flutter_plugins.dart:1027:5)
+#6      refreshPluginsList (package:flutter_tools/src/flutter_plugins.dart:1167:5)
+<asynchronous suspension>
+#7      FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:368:5)
+<asynchronous suspension>
+#8      PackagesGetCommand.runCommand (package:flutter_tools/src/commands/packages.dart:388:7)
+<asynchronous suspension>
+#9      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1558:27)
+<asynchronous suspension>
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#11     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#12     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:496:9)
+<asynchronous suspension>
+#13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:431:5)
+<asynchronous suspension>
+#15     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:98:11)
+<asynchronous suspension>
+#16     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#17     main (package:flutter_tools/executable.dart:99:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.29.0, on Microsoft Windows [Version 10.0.19045.5011], locale en-US) [3.0s]
+    • Flutter version 3.29.0 on channel stable at E:\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 35c388afb5 (3 weeks ago), 2025-02-10 12:48:41 -0800
+    • Engine revision f73bfc4522
+    • Dart version 3.7.0
+    • DevTools version 2.42.2
+
+[✓] Windows Version (10 Pro 64-bit, 22H2, 2009) [18.2s]
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 35.0.0) [26.4s]
+    • Android SDK at C:\Users\User\AppData\Local\Android\Sdk
+    • Platform android-35, build-tools 35.0.0
+    • Java binary at: E:\Android\Android Studio\jbr\bin\java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment (build 17.0.11+0--11852314)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web [2.3s]
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✗] Visual Studio - develop Windows apps [2.3s]
+    ✗ Visual Studio not installed; this is necessary to develop Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[✓] Android Studio (version 2024.1) [2.3s]
+    • Android Studio at E:\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.11+0--11852314)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2024.3) [2.3s]
+    • IntelliJ at E:\Program Files\IntelliJ IDEA 2024.3.1.1
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin version 243.23177
+
+[✓] VS Code (version 1.97.2) [21ms]
+    • VS Code at C:\Users\User\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.104.0
+
+[✓] Connected device (4 available) [949ms]
+    • vivo 2015 (mobile) • S8KRUGNVBETGLB4L • android-arm64  • Android 10 (API 29)
+    • Windows (desktop)  • windows          • windows-x64    • Microsoft Windows [Version 10.0.19045.5011]
+    • Chrome (web)       • chrome           • web-javascript • Google Chrome 133.0.6943.142
+    • Edge (web)         • edge             • web-javascript • Microsoft Edge 133.0.3065.82
+
+[✓] Network resources [1,901ms]
+    • All expected network resources are available.
+
+! Doctor found issues in 1 category.
+```
